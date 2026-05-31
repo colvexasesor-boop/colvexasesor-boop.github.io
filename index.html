@@ -3,10 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>COLVEX | Capacitaciones y Registros Sanitarios</title>
+<title>COLVEX | Registros Sanitarios y Capacitaciones</title>
 
 <style>
+:root{
+--azul:#12166B;
+--azul-medio:#2E35A8;
+--turquesa:#5DE0C2;
+--fondo:#F7F9FC;
+--texto:#1F2937;
+--oscuro:#0B1020;
+}
 
 *{
 margin:0;
@@ -16,259 +23,500 @@ font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-background:#f5f8fc;
-color:#222;
+background:var(--fondo);
+color:var(--texto);
+line-height:1.6;
 }
 
 header{
-background:#0b3c5d;
-color:white;
-padding:20px 10%;
+background:white;
+padding:14px 8%;
 display:flex;
-justify-content:space-between;
 align-items:center;
+justify-content:space-between;
+box-shadow:0 2px 12px rgba(0,0,0,0.08);
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-.logo{
-font-size:28px;
-font-weight:bold;
+.logo img{
+height:58px;
 }
 
 nav a{
-color:white;
+margin-left:26px;
 text-decoration:none;
-margin-left:20px;
-font-weight:bold;
+color:var(--azul);
+font-weight:700;
+}
+
+.btn-nav{
+background:var(--azul);
+color:white !important;
+padding:10px 18px;
+border-radius:8px;
 }
 
 .hero{
-background:linear-gradient(rgba(11,60,93,0.85),rgba(11,60,93,0.85)),
-url('https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=1600&q=80');
+min-height:86vh;
+background:
+linear-gradient(90deg, rgba(11,16,32,0.92), rgba(18,22,107,0.70), rgba(18,22,107,0.10)),
+url("equipo-colvex.jpg");
 background-size:cover;
 background-position:center;
-height:80vh;
 display:flex;
 align-items:center;
-justify-content:center;
-text-align:center;
+padding:80px 8%;
 color:white;
-padding:20px;
 }
 
-.hero-content h1{
-font-size:55px;
+.hero-content{
+max-width:680px;
+}
+
+.hero h1{
+font-size:58px;
+line-height:1.1;
 margin-bottom:20px;
 }
 
-.hero-content p{
-font-size:22px;
+.hero h1 span{
+color:var(--turquesa);
+}
+
+.hero p{
+font-size:21px;
+margin-bottom:15px;
+}
+
+.eslogan{
+color:var(--turquesa);
+font-weight:bold;
 margin-bottom:30px;
 }
 
+.btns{
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+}
+
 .btn{
-display:inline-block;
-background:#00a8e8;
-color:white;
-padding:15px 30px;
+padding:15px 24px;
+border-radius:10px;
 text-decoration:none;
-border-radius:8px;
-font-weight:bold;
+font-weight:700;
+display:inline-block;
+}
+
+.btn-primary{
+background:var(--turquesa);
+color:var(--oscuro);
+}
+
+.btn-secondary{
+border:2px solid white;
+color:white;
 }
 
 section{
-padding:80px 10%;
+padding:80px 8%;
 }
 
 .titulo{
 text-align:center;
-margin-bottom:50px;
-font-size:36px;
-color:#0b3c5d;
+font-size:38px;
+color:var(--azul);
+margin-bottom:16px;
+}
+
+.subtitulo{
+text-align:center;
+max-width:760px;
+margin:0 auto 45px;
+color:#4B5563;
 }
 
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+gap:26px;
 }
 
 .card{
 background:white;
+border-radius:18px;
 padding:30px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+box-shadow:0 8px 24px rgba(0,0,0,0.08);
+border-top:5px solid var(--turquesa);
 }
 
 .card h3{
-margin-bottom:15px;
-color:#0b3c5d;
+color:var(--azul);
+margin-bottom:12px;
 }
 
-.contacto{
-background:#0b3c5d;
+.card ul{
+padding-left:20px;
+}
+
+.bloque-azul{
+background:linear-gradient(135deg,var(--azul),var(--oscuro));
 color:white;
-text-align:center;
+}
+
+.bloque-azul .titulo{
+color:white;
+}
+
+.ventajas{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:22px;
+}
+
+.ventaja{
+background:rgba(255,255,255,0.08);
+padding:25px;
+border-radius:16px;
+}
+
+.ventaja h3{
+color:var(--turquesa);
+margin-bottom:10px;
+}
+
+.contacto-grid{
+display:grid;
+grid-template-columns:1fr 1.2fr;
+gap:35px;
+align-items:start;
+}
+
+.info-contacto{
+background:var(--azul);
+color:white;
+padding:35px;
+border-radius:20px;
+}
+
+.info-contacto h3{
+color:var(--turquesa);
+margin-bottom:20px;
+}
+
+.formulario{
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 8px 24px rgba(0,0,0,0.08);
+}
+
+.formulario input,
+.formulario textarea{
+width:100%;
+padding:14px;
+margin-bottom:15px;
+border:1px solid #D1D5DB;
+border-radius:8px;
+font-size:15px;
+}
+
+.formulario textarea{
+height:130px;
+resize:none;
+}
+
+.formulario button{
+width:100%;
+background:var(--turquesa);
+color:var(--oscuro);
+border:none;
+padding:15px;
+font-weight:700;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+}
+
+.redes a{
+color:white;
+display:block;
+margin-top:8px;
 }
 
 footer{
-background:#082c45;
+background:var(--oscuro);
 color:white;
+padding:40px 8%;
 text-align:center;
-padding:20px;
+}
+
+footer img{
+height:60px;
+margin-bottom:15px;
 }
 
 .whatsapp{
 position:fixed;
-bottom:20px;
-right:20px;
+right:22px;
+bottom:22px;
 background:#25D366;
 color:white;
-padding:15px 20px;
-border-radius:50px;
 text-decoration:none;
+padding:15px 22px;
+border-radius:50px;
 font-weight:bold;
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+z-index:2000;
 }
 
-@media(max-width:768px){
-
-.hero-content h1{
-font-size:35px;
-}
-
-.hero-content p{
-font-size:18px;
-}
-
+@media(max-width:850px){
 header{
 flex-direction:column;
+gap:10px;
 }
 
 nav{
-margin-top:15px;
+text-align:center;
 }
 
+nav a{
+display:inline-block;
+margin:8px;
 }
 
+.hero{
+padding:60px 6%;
+background-position:center;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.contacto-grid{
+grid-template-columns:1fr;
+}
+}
 </style>
 </head>
 
 <body>
 
 <header>
-
-<div class="logo">COLVEX</div>
+<div class="logo">
+<img src="logo-colvex.png" alt="Logo COLVEX">
+</div>
 
 <nav>
 <a href="#servicios">Servicios</a>
 <a href="#capacitaciones">Capacitaciones</a>
+<a href="#nosotros">Nosotros</a>
 <a href="#contacto">Contacto</a>
+<a class="btn-nav" href="https://wa.me/593991046916?text=Hola,%20quiero%20más%20información%20sobre%20los%20servicios%20de%20COLVEX." target="_blank">WhatsApp</a>
 </nav>
-
 </header>
 
 <section class="hero">
-
 <div class="hero-content">
-
-<h1>Capacitaciones y Registros Sanitarios</h1>
+<h1>Impulsamos el crecimiento de tu <span>marca alimentaria</span></h1>
 
 <p>
-Asesoría técnica especializada para alimentos,
-suplementos alimenticios y productos importados.
+Asesoría técnica, registros sanitarios y capacitación especializada para alimentos y suplementos alimenticios.
 </p>
 
-<a href="#contacto" class="btn">
-Solicitar Asesoría
+<p class="eslogan">
+Te guiamos hoy, creces mañana.
+</p>
+
+<div class="btns">
+<a class="btn btn-primary" href="https://wa.me/593991046916?text=Hola,%20quiero%20más%20información%20para%20obtener%20el%20registro%20sanitario%20de%20un%20producto." target="_blank">
+Solicitar registro sanitario
 </a>
 
+<a class="btn btn-secondary" href="#capacitaciones">
+Consultar capacitaciones
+</a>
 </div>
-
+</div>
 </section>
 
 <section id="servicios">
-
 <h2 class="titulo">Nuestros Servicios</h2>
+<p class="subtitulo">
+Brindamos acompañamiento técnico y documental para productos alimenticios nacionales, importados y suplementos alimenticios.
+</p>
 
 <div class="cards">
 
 <div class="card">
 <h3>Registros Sanitarios</h3>
-<p>Gestión integral de registros sanitarios para alimentos nacionales e importados.</p>
-</div>
-
-<div class="card">
-<h3>Suplementos Alimenticios</h3>
-<p>Asesoría técnica y documental para suplementos alimenticios.</p>
+<ul>
+<li>Alimentos nacionales</li>
+<li>Alimentos importados</li>
+<li>Suplementos alimenticios</li>
+<li>Acompañamiento documental</li>
+</ul>
 </div>
 
 <div class="card">
 <h3>Etiquetado</h3>
-<p>Revisión y adecuación de etiquetas según normativa vigente.</p>
+<ul>
+<li>Revisión de etiquetas</li>
+<li>Etiquetado nutricional</li>
+<li>Diseño técnico de etiquetas</li>
+<li>Corrección de observaciones</li>
+</ul>
 </div>
 
 <div class="card">
-<h3>Subsanaciones</h3>
-<p>Respuesta y seguimiento de observaciones emitidas por la autoridad sanitaria.</p>
+<h3>Estudios y Asesoría</h3>
+<ul>
+<li>Estudios de vida útil</li>
+<li>Asesoría documental</li>
+<li>Buenas Prácticas de Manufactura</li>
+<li>Revisión técnica de requisitos</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Productos Importados</h3>
+<ul>
+<li>Revisión de documentos de origen</li>
+<li>Validación de etiquetas</li>
+<li>Requisitos para ingreso al país</li>
+<li>Acompañamiento en el trámite</li>
+</ul>
 </div>
 
 </div>
-
 </section>
 
-<section id="capacitaciones">
-
+<section id="capacitaciones" class="bloque-azul">
 <h2 class="titulo">Capacitaciones</h2>
+<p class="subtitulo" style="color:#E5E7EB;">
+Formación técnica para emprendedores, productores, empresas alimentarias, distribuidores e importadores.
+</p>
 
 <div class="cards">
 
 <div class="card">
-<h3>Yogurt y Quesos</h3>
-<p>Elaboración técnica con mención en normativa e inocuidad alimentaria.</p>
+<h3>Elaboración técnica de yogurt y quesos</h3>
+<p>Capacitación práctica con enfoque en normativa, inocuidad y procesos productivos.</p>
 </div>
 
 <div class="card">
 <h3>Inocuidad Alimentaria</h3>
-<p>Buenas prácticas de manufactura y control de calidad.</p>
+<p>Buenas prácticas aplicadas a la manipulación, elaboración y control de alimentos.</p>
 </div>
 
 <div class="card">
 <h3>Normativa Sanitaria</h3>
-<p>Capacitación para emprendedores y empresas alimentarias.</p>
+<p>Formación para comprender requisitos sanitarios aplicables a alimentos y suplementos.</p>
+</div>
+
+<div class="card">
+<h3>Etiquetado de Alimentos</h3>
+<p>Capacitación para interpretar y aplicar criterios técnicos de etiquetado.</p>
 </div>
 
 </div>
-
 </section>
 
-<section id="contacto" class="contacto">
+<section id="nosotros">
+<h2 class="titulo">¿Por qué elegir COLVEX?</h2>
 
-<h2 class="titulo" style="color:white;">
-Contáctanos
-</h2>
+<div class="ventajas">
 
-<p>
-WhatsApp: 0991046916
-</p>
+<div class="ventaja" style="background:white; color:#1F2937;">
+<h3>Asesoría especializada</h3>
+<p>Orientación técnica enfocada en alimentos, suplementos y normativa sanitaria.</p>
+</div>
+
+<div class="ventaja" style="background:white; color:#1F2937;">
+<h3>Acompañamiento completo</h3>
+<p>Te guiamos durante el proceso documental, técnico y de revisión de requisitos.</p>
+</div>
+
+<div class="ventaja" style="background:white; color:#1F2937;">
+<h3>Enfoque práctico</h3>
+<p>Soluciones claras para emprendedores, empresas, importadores y productores.</p>
+</div>
+
+<div class="ventaja" style="background:white; color:#1F2937;">
+<h3>Capacitación aplicada</h3>
+<p>Formación útil para mejorar procesos, inocuidad y cumplimiento sanitario.</p>
+</div>
+
+</div>
+</section>
+
+<section id="contacto" class="bloque-azul">
+<h2 class="titulo">Contáctanos</h2>
+
+<div class="contacto-grid">
+
+<div class="info-contacto">
+<h3>Información de contacto</h3>
+<p><strong>WhatsApp:</strong> 0991046916</p>
+<p><strong>Correo:</strong> colvexasesor@gmail.com</p>
+<p><strong>Ubicación:</strong> Ambato - Ecuador</p>
 
 <br>
 
-<p>
-Email: contacto@colvex.com
-</p>
+<h3>Síguenos</h3>
+<div class="redes">
+<a href="https://www.facebook.com/profile.php?id=61586880123639" target="_blank">Facebook</a>
+<a href="https://www.instagram.com/colvex_consultancy?igsh=MWphc2phYjBtNGM0bA==" target="_blank">Instagram</a>
+<a href="https://www.tiktok.com/@colvex_consultancy?_r=1&_t=ZS-96p8WJRSCQb" target="_blank">TikTok</a>
+</div>
+</div>
 
+<form class="formulario" onsubmit="enviarWhatsApp(); return false;">
+<input type="text" id="nombre" placeholder="Nombre completo" required>
+<input type="text" id="empresa" placeholder="Empresa">
+<input type="text" id="producto" placeholder="Producto o servicio de interés" required>
+<input type="email" id="correo" placeholder="Correo electrónico" required>
+<input type="tel" id="telefono" placeholder="Teléfono" required>
+<textarea id="mensaje" placeholder="Mensaje" required></textarea>
+
+<button type="submit">Enviar mensaje por WhatsApp</button>
+</form>
+
+</div>
 </section>
 
 <footer>
-
-© 2020 COLVEX - Todos los derechos reservados
-
+<img src="logo-colvex.png" alt="Logo COLVEX">
+<p>Te guiamos hoy, creces mañana.</p>
+<p>© 2026 COLVEX. Todos los derechos reservados.</p>
 </footer>
 
-<a class="whatsapp"
-href="https://wa.me/593991046916"
-target="_blank">
+<a class="whatsapp" href="https://wa.me/593991046916?text=Hola,%20quiero%20más%20información%20sobre%20los%20servicios%20de%20COLVEX." target="_blank">
 WhatsApp
 </a>
+
+<script>
+function enviarWhatsApp(){
+let nombre = document.getElementById("nombre").value;
+let empresa = document.getElementById("empresa").value;
+let producto = document.getElementById("producto").value;
+let correo = document.getElementById("correo").value;
+let telefono = document.getElementById("telefono").value;
+let mensaje = document.getElementById("mensaje").value;
+
+let texto = `Hola, soy ${nombre}.%0A
+Empresa: ${empresa}.%0A
+Producto/servicio de interés: ${producto}.%0A
+Correo: ${correo}.%0A
+Teléfono: ${telefono}.%0A
+Mensaje: ${mensaje}`;
+
+window.open(`https://wa.me/593991046916?text=${texto}`, "_blank");
+}
+</script>
 
 </body>
 </html>
