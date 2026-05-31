@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>COLVEX | Capacitaciones y Registros Sanitarios</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f5f8fc;
+color:#222;
+}
+
+header{
+background:#0b3c5d;
+color:white;
+padding:20px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+}
+
+.hero{
+background:linear-gradient(rgba(11,60,93,0.85),rgba(11,60,93,0.85)),
+url('https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+height:80vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero-content h1{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero-content p{
+font-size:22px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+background:#00a8e8;
+color:white;
+padding:15px 30px;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+section{
+padding:80px 10%;
+}
+
+.titulo{
+text-align:center;
+margin-bottom:50px;
+font-size:36px;
+color:#0b3c5d;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#0b3c5d;
+}
+
+.contacto{
+background:#0b3c5d;
+color:white;
+text-align:center;
+}
+
+footer{
+background:#082c45;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:35px;
+}
+
+.hero-content p{
+font-size:18px;
+}
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">COLVEX</div>
+
+<nav>
+<a href="#servicios">Servicios</a>
+<a href="#capacitaciones">Capacitaciones</a>
+<a href="#contacto">Contacto</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Capacitaciones y Registros Sanitarios</h1>
+
+<p>
+Asesoría técnica especializada para alimentos,
+suplementos alimenticios y productos importados.
+</p>
+
+<a href="#contacto" class="btn">
+Solicitar Asesoría
+</a>
+
+</div>
+
+</section>
+
+<section id="servicios">
+
+<h2 class="titulo">Nuestros Servicios</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Registros Sanitarios</h3>
+<p>Gestión integral de registros sanitarios para alimentos nacionales e importados.</p>
+</div>
+
+<div class="card">
+<h3>Suplementos Alimenticios</h3>
+<p>Asesoría técnica y documental para suplementos alimenticios.</p>
+</div>
+
+<div class="card">
+<h3>Etiquetado</h3>
+<p>Revisión y adecuación de etiquetas según normativa vigente.</p>
+</div>
+
+<div class="card">
+<h3>Subsanaciones</h3>
+<p>Respuesta y seguimiento de observaciones emitidas por la autoridad sanitaria.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="capacitaciones">
+
+<h2 class="titulo">Capacitaciones</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Yogurt y Quesos</h3>
+<p>Elaboración técnica con mención en normativa e inocuidad alimentaria.</p>
+</div>
+
+<div class="card">
+<h3>Inocuidad Alimentaria</h3>
+<p>Buenas prácticas de manufactura y control de calidad.</p>
+</div>
+
+<div class="card">
+<h3>Normativa Sanitaria</h3>
+<p>Capacitación para emprendedores y empresas alimentarias.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contacto" class="contacto">
+
+<h2 class="titulo" style="color:white;">
+Contáctanos
+</h2>
+
+<p>
+WhatsApp: 0991046916
+</p>
+
+<br>
+
+<p>
+Email: contacto@colvex.com
+</p>
+
+</section>
+
+<footer>
+
+© 2020 COLVEX - Todos los derechos reservados
+
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/593991046916"
+target="_blank">
+WhatsApp
+</a>
+
+</body>
+</html>
